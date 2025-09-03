@@ -1,6 +1,6 @@
 // src/store/userStore.ts
-import { atom } from 'jotai';
-import { User } from '@/lib//simulation';
+import { atom } from "jotai";
+import { User } from "@/lib//simulation";
 
 export const usersAtom = atom<User[]>([]);
 export const followUserIdAtom = atom<string | null>(null);

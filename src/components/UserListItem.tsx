@@ -1,9 +1,9 @@
-// components/UserListItem.tsx
-'use client';
+// src/components/UserListItem.tsx
+"use client";
 
-import Image from 'next/image';
-import { memo } from 'react'; // <-- Impor memo
-import { User } from '@/lib/simulation';
+import Image from "next/image";
+import { memo } from "react";
+import { User } from "@/lib/simulation";
 
 type UserListItemProps = {
   user: User;
@@ -11,18 +11,16 @@ type UserListItemProps = {
   onClick: () => void;
 };
 
-// Komponen dibungkus dengan memo. Ia hanya akan re-render jika props (user, isBeingFollowed, onClick) berubah.
 function UserListItem({ user, isBeingFollowed, onClick }: UserListItemProps) {
-  const truncatedId = user.id.substring(0, 8);
-
   return (
     <li
       onClick={onClick}
       className={`
         flex items-center p-3 transition-all duration-200 cursor-pointer border-l-4
-        ${isBeingFollowed
-          ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/50'
-          : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-700'
+        ${
+          isBeingFollowed
+            ? "border-blue-500 bg-blue-50 dark:bg-blue-900/50"
+            : "border-transparent hover:bg-gray-100 dark:hover:bg-gray-700"
         }
       `}
     >
@@ -38,11 +36,14 @@ function UserListItem({ user, isBeingFollowed, onClick }: UserListItemProps) {
           {user.name}
         </p>
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          ID: {truncatedId}...
+          ID: {user.id}
         </p>
       </div>
       {isBeingFollowed && (
-        <div className="ml-2 w-2 h-2 bg-blue-500 rounded-full flex-shrink-0" title="Following"></div>
+        <div
+          className="ml-2 w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"
+          title="Following"
+        ></div>
       )}
     </li>
   );

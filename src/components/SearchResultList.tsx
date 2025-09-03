@@ -1,7 +1,7 @@
 // components/SearchResultList.tsx
-import { memo } from 'react';
-import UserListItem from './UserListItem';
-import type { User } from '@/lib/simulation';
+import { memo } from "react";
+import UserListItem from "./UserListItem";
+import type { User } from "@/lib/simulation";
 
 type SearchResultListProps = {
   users: User[];
@@ -10,7 +10,12 @@ type SearchResultListProps = {
   query: string;
 };
 
-function SearchResultList({ users, onUserClick, activeUserId, query }: SearchResultListProps) {
+function SearchResultList({
+  users,
+  onUserClick,
+  activeUserId,
+  query,
+}: SearchResultListProps) {
   const hasResults = users.length > 0;
   const showNotFoundMessage = !hasResults && query && !activeUserId;
 
