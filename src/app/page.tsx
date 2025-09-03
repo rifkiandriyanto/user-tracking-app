@@ -1,13 +1,15 @@
-'use client'
+"use client";
 import dynamic from "next/dynamic";
+import SearchUser from "@/components/SearchUser";
 const UserTrackingMap = dynamic(() => import("@/components/UserTrackingMap"), {
   ssr: false,
 });
 
 export default function Home() {
   return (
-    <section className="relative">
+    <main className="relative h-screen w-screen">
+      <SearchUser />
       <UserTrackingMap />
-    </section>
+    </main>
   );
 }

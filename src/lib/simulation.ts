@@ -40,7 +40,7 @@ export function generateUsers(
 }
 
 export function updateUserPosition(user: User): User {
-  const baseMovementFactor = 0.00099;
+  const baseMovementFactor = 0.00009;
 
   const movementDistance = baseMovementFactor * user.speed;
 
