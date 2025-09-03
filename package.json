@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "jotai-effect": "^2.0.5",
+    "mapbox-gl": "^3.14.0",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
